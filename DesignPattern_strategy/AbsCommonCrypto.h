@@ -11,7 +11,6 @@
 /**
  *  这是父类方法,其他子类继承他,可以各自实现他的方法
  */
-
 @interface AbsCommonCrypto : NSObject
 
 /**
@@ -22,8 +21,7 @@
  *
  *  @return 返回加密后的数据
  */
-
-- (NSData *)encryptedData:(NSData *)data usingKey:(NSString *)key ;
+- (NSData *)encryptedData:(NSData *)data usingKey:(NSString *)key;
 
 /**
  *  实例方法
@@ -33,7 +31,6 @@
  *
  *  @return 返回解密后的数据
  */
-
-- (NSData *)decryptedData:(NSData *)data usingKey:(NSString *)key ;
+- (NSData *)decryptedData:(NSData *)data usingKey:(NSString *)key;
 
 @end
