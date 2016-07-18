@@ -18,7 +18,6 @@
 
 - (NSData *)decryptedData:(NSData *)data usingKey:(NSString *)key {
 
-
     return [data decryptedCASTDataUsingKey:key error:nil];
 }
 

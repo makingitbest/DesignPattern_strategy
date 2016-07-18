@@ -14,7 +14,6 @@
 - (NSData *)encryptedData:(NSData *)data usingKey:(NSString *)key {
     
     return [data AES256EncryptedDataUsingKey:key error:nil];
-
 }
 
 - (NSData *)decryptedData:(NSData *)data usingKey:(NSString *)key {

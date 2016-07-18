@@ -21,6 +21,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     /**
@@ -36,7 +37,6 @@
     decryptData == <e68891e4 bbace983 bde698af e5a5bde6 9c8be58f 8b>
     解密后的str == 我们都是好朋友
      */
-    
     
     self.commonCrypto = [AES256CommonCrypto new];
     /*
@@ -65,25 +65,17 @@
     解密后的str == 我们都是好朋友
      */
     
-    
-    NSString *string = @"我们都是好朋友";
-    
-    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-
-    NSData *encryptData =  [self.commonCrypto encryptedData:data usingKey:@"5njsl%_njvns"];
-    
-    NSData *decryptData =  [self.commonCrypto decryptedData:encryptData usingKey:@"5njsl%_njvns"];
-
-    NSString * str = [[NSString alloc]initWithData:decryptData encoding:NSUTF8StringEncoding];
-    
+    NSString *string      = @"我们都是好朋友";
+    NSData   *data        = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSData   *encryptData = [self.commonCrypto encryptedData:data usingKey:@"5njsl%_njvns"];
+    NSData   *decryptData = [self.commonCrypto decryptedData:encryptData usingKey:@"5njsl%_njvns"];
+    NSString *str         = [[NSString alloc]initWithData:decryptData encoding:NSUTF8StringEncoding];
     
     NSLog(@"最开始的string == %@",string);
     NSLog(@"data == %@",data);
     NSLog(@"encryptData == %@",encryptData);
     NSLog(@"decryptData == %@",decryptData);
     NSLog(@"解密后的str == %@",str);
-    
-
 }
 
 @end
